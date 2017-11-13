@@ -1,19 +1,20 @@
 \documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 \usepackage{tabularx}
+\usepackage{color}
 \moderncvstyle{classic} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
 \moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
-
 
 \usepackage[scale=0.8]{geometry} % Reduce document margins
 %\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
+
 %----------------------------------------------------------------------------------------
-%   NAME AND CONTACT INFORMATION SECTION
+%      NAME AND CONTACT INFORMATION SECTION
 %----------------------------------------------------------------------------------------
 
-\firstname{Bereziuk} % Your first name
-\familyname{Ivan} % Your last name
+\firstname{Bereziuk}
+\familyname{Ivan}
 	
 % All information in this block is optional, comment out any lines you don't need
 %\title{Curriculum Vitae}
@@ -22,7 +23,9 @@
 \extrainfo{
 	Birth date: 07 Jul 1992\\
 	GitHub: \url{github.com/Domest0s} \\
-	Citizenship: Ukraine}
+	Citizenship: Ukraine, \\
+	(in possession of valid work permit)
+}
 
 %\phone{(000) 111 1112}
 %\fax{(000) 111 1113}
@@ -36,136 +39,149 @@
 %----------------------------------------------------------------------------------------
 
 \begin{document}
-
 \makecvtitle % Print the CV title
 
 
 %----------------------------------------------------------------------------------------
-%   EDUCATION SECTION
+%      EDUCATION SECTION
 %----------------------------------------------------------------------------------------
 
 \section{Education}
 
-\cventry{2013-2015}{Master of Physics}{Taras Shevchenko National University of Kyiv}{Ukraine}{}{}
-%EQF~level~7
-\cvitem{}{Thesis title: \emph{Initial design studies of a drift tube detector for SHiP experiment, CERN.}}
-\cvitem{}{Supervisor: Dr. Massimiliano Ferro-Luzzi, massimiliano.ferro-luzzi@cern.ch}
-\cvitem{}{Studied and simulated the behaviour of long STRAW tubes for SHiP experiment. The project was developed at CERN.} %under influence of gravity and electromagnetic field, signal gain, time-dependent characteristics, tube efficiency and precision that tubes can grant in SHiP experiment using GARFIELD software. Also this thesis contain comparison of tube gain and efficiency for tube samples with with theoretical prediction for tube gain and efficiency from GARFIELD simulation.}
+\cventry{2013-2015}
+	{Master of Physics}
+	{\textcolor{gray}{Taras Shevchenko National University of Kyiv}}
+	{\textcolor{gray}{Ukraine}}
+	{\newline{} Thesis: \emph{Initial design studies of Drift tube detector for SHiP experiment, CERN}}
+	{
+	\begin{itemize}
+		\item Monte-Carlo simulations and stochastic data analysis of events from STRAW tube
+		\item Development of track reconstruction models in STRAW tubes
+	\end{itemize}
+	}
+%\cvitem{}{Supervisor: Dr. Massimiliano Ferro-Luzzi, massimiliano.ferro-luzzi@cern.ch}
 
-\cventry{2009-2013}{Bachelor of Physics}{Taras Shevchenko National University of Kyiv}{Ukraine}{}{}	
-\cvitem{}{Thesis title: \emph{Position sensitive Si microstrip detector for X-ray analysis}}
-\cvitem{}{Supervisor: Prof. Dr. Valery Pugatch, pugatch@kinr.kiev.ua}
-\cvitem{}{Made the restore work and reverse engineering for Si-strip sensor-based detector equipment (ASIC + FPGA based DAQ) and further developing of the prototype.}{}{}{}{}
 
+\cventry{2009-2013}
+	{Bachelor of Physics}
+	{\textcolor{gray}{Taras Shevchenko National University of Kyiv}}
+	{\textcolor{gray}{Ukraine}}
+{
+	\newline{}
+	Thesis: \emph{Position sensitive Si microstrip detector for X-ray analysis, Kiev Institute for Nuclear Research}
+}
+{
+	\begin{itemize}
+		\item reverse engineering of DAQ for position sensitive detector based on Si-strip sensors.
+		\item prototyping of Si-strip sensor.
+	\end{itemize} 
+}
+%\cvitem{}{Supervisor: Prof. Dr. Valery Pugatch, pugatch@kinr.kiev.ua}
 
 %----------------------------------------------------------------------------------------
-%   WORK EXPERIENCE SECTION
+%      WORK EXPERIENCE SECTION
 %----------------------------------------------------------------------------------------
 
 \section{Work \& Practical Experience}
 
 %\subsection{Vocational}
-
-\cventry{May 2016 - Oct 2016}{Software-engineer}{\textsc{CreaLog}}{Munich}{Germany}{
+\cventry{Apr 2017 - Current~}{Full Stack software engineer}{\textsc{Qualogy}}{Rijswijk}{Netherlands}{
 \begin{itemize}
-	\item Developed a JavaScript library as a part of a web application where user constructs a flowchart. This is a highly interactive and easy-to-use application with intuitive interface (based on Drag\&Drop gestures).
+	\item Web application development: front and back end. (Java, JavaScript, SQL, Docker, Jenkins)
 \end{itemize}
 }
 %------------------------------------------------
 
-\cventry{Oct 2015 - Dec 2015}{Intern}{\textsc{Samsung R\&D Institute Ukraine}}{Kyiv}{}{
+\cventry{May 2016 - Oct 2016~}{Software-engineer}{\textsc{CreaLog}}{Munich}{Germany}{
 \begin{itemize}
-	\item Developed mobile application under TIZEN OS (\textbf{C/C\texttt{++}} programming). The mobile application is for sensitive data storing (information such as passwords, logins etc). To login to the app, it uses facial recognition which can be set up using a ``selfie''. The app is now on the market.
-	\item Had an experience of using computer vision library OpenCV.
-	\item Used Git, TDD, Agile Software Development process.
+	\item Developed a JavaScript library -- a core library for web flowchart constructor. This highly interactive application has an intuitive interface drawn with SVG vector graphics and driven by mouse and keyboard.
+	\item Developed architecture of the web application
 \end{itemize}
 }
 %------------------------------------------------
 
-\cventry{July 2014 - Jan 2015}{Intern}{\textsc{EPFL}}{Lausanne}{Switzerland}{
+\cventry{Oct 2015 - Dec 2015~}{Intern}{\textsc{Samsung R\&D Institute Ukraine}}{Kyiv}{}{
 \begin{itemize}
-	\item Developing, documenting and maintenance of a \texttt{C++} library responsible for parsing and analyzing of \LaTeX -article's source code.
-	\item Project placed here: \url{github.com/Domest0s/texpp}
-\end{itemize} 
+	\item TIZEN OS mobile application development (C,C\texttt{++}). The mobile application was designed to store sensitive data at heavily rely on object recognition from OpenCV library. The app is on the market.
+	\item Git, TDD, Agile certification training.
+\end{itemize}
+}
+%------------------------------------------------
+
+\cventry{July 2014 - Jan 2015~}{Intern}{\textsc{EPFL}}{Lausanne}{Switzerland}{
+\begin{itemize}
+	\item Development of \texttt{C++} library responsible for parsing and analyzing of \LaTeX -article's source code.
+	\item The library is available on GitHub: \url{github.com/Domest0s/texpp}.
+\end{itemize}
 }
 
 %------------------------------------------------
 
-\cventry{Nov 2013 - Feb 2014}{iOS mobile developer}{SAPRUN}{Kyiv}{Ukraine}{
+\cventry{Nov 2013 - Feb 2014~}{iOS mobile developer}{SAPRUN}{Kyiv}{Ukraine}{
 \begin{itemize}
-	\item Development of business oriented mobile(iOS) application (Objective-C).
+	\item Developed business oriented mobile(iOS) application (Objective-C).
 \end{itemize} }
 
-\cventry{July 2012 - Sept 2012}{Intern at ``DESY Summer Student Programme''}{Zeuthen}{Germany}{}{
+\cventry{July 2012 - Sept 2012~}{Intern at ``DESY Summer Student Programme''}{Zeuthen}{Germany}{}{
 \begin{itemize}
-	\item Used ANSYS software for destructive analysis and modeling of photon penetrating target - source of positrons at International Linear Collider.
+	\item ANSYS simulations -- destructive analysis and modeling of photon penetrating target. International Linear Collider (ILC) project.
 \end{itemize} 
 }
-\clearpage
+%\clearpage
 
 
 %----------------------------------------------------------------------------------------
-%   PERSONAL SKILLS
+%      PERSONAL SKILLS
 %----------------------------------------------------------------------------------------
 
 \section{Personal skills}
 \renewcommand{\arraystretch}{1.5}
 \setlength{\tabcolsep}{5pt}
-\cvitem{Languages}{ 
-	English (professional working proficiency) \newline{}
-	German (basic (A2.1)) \newline{}
-	Ukrainian (mother tongue) \newline{}
-	Russian (fluent)
+\cvitem{Languages}{
+	\begin{tabularx}{0.5\textwidth}
+		{
+			>{\setlength\hsize{5\hsize}}X
+			>{\setlength\hsize{8\hsize}}X 
+		}
+		\textbullet ~English & good \tabularnewline
+		\textbullet ~German & basic A2.1 \tabularnewline
+		\textbullet ~Ukrainian & mother tongue \tabularnewline
+		\textbullet ~Russian & fluent
+	\end{tabularx}
 }
 
 \subsection{Technology summary}
 
 \cvitem{OS}{Ubuntu, Windows, Mac OS X}
 \cvitem{Programming languages}{
-%		\texttt{\textbf{C/C++11} (+STL \& boost)} & advanced \\
-%		\LaTeX , ActionScript 3.0, ROOT, Mathematica, MATLAB & good \\
-%		Objective-C, Verilog, FORTRAN, SQL, QML, Java, Python, Pascal & basic \\
-%		\end{tabular} \newline
-	advanced: \texttt{\textbf{C/C++11} + (STL \& boost)}, JavaScript \newline 
-	good:~~~~~ \LaTeX , ActionScript 3.0, ROOT, Mathematica, MATLAB \newline
-	basic:~~~~~ Objective-C, Java, Verilog, FORTRAN, SQL, QML, Python, Pascal
+	\textbf{Java}(OCP8), \textbf{C\texttt{++}}14, \textbf{C}, \textbf{JavaScript} \newline
+ 	\texttt{C\#}, CMake, bash, batch, ActionScript 3.0, Objective~C, Python, Verilog, FORTRAN, Pascal
 	}
-\cvitem{Additional skills}{Git, CMake, bash, HTML, CSS, SVG, XML, ExtJS, Doxygen, LabVIEW, PhotoShop}
-\cvitem{Target programming}{TIZEN OS mobile, Arduino, STM32, ATmega8,  FPGA(Altera, Xilinx)}
-
-\cvitem{Digital competence}{
-	\begin{tabularx}{0.9\textwidth}{ 
-		>{\setlength\hsize{1\hsize}\centering}X
-		|>{\setlength\hsize{1\hsize}\centering}X
-		|>{\setlength\hsize{1\hsize}\centering}X
-		|>{\setlength\hsize{1\hsize}\centering}X
-		|>{\setlength\hsize{1\hsize}\centering}X } 
-%  	\hline
-	Information processing & Communication & Content creation & Safety & Problem solving \tabularnewline
-	\hline 
-  	Proficient user & Proficient user & Basic user & Independent user & Independent user \tabularnewline
-%	\hline
-\end{tabularx}
-}
-
+\cvitem{Additional skills}{Git, Scrum, Agile, Docker, GCP, Win32 API, HTML, CSS, SVG, \LaTeX , SQL, PostgreSQL, QML, XML, ExtJS, Doxygen, LabVIEW, ROOT, Mathematica, MATLAB,  PhotoShop}
+\cvitem{Development platforms}{Desktop, web, TIZEN OS mobile, Arduino, STM32, ATmega8, FPGA}
 
 %----------------------------------------------------------------------------------------
-%   INTERESTS SECTION
+%      INTERESTS SECTION
 %----------------------------------------------------------------------------------------
 
 \section{Interests}
-\cvitem{technical}{system programming, OpenCL, multithreading, high performance computing, 3D~API (DirectX/openGL/Vulcan),  Microcontrollers \& FPGA-programming, programmable technique}
-\cvitem{Hobbies}{Basketball, Guitar
-	}
-
-\section{References}
-\cvitem{CreaLog Munich}
-{Dr. Bernd Plannerer, Tel: \texttt{+}49 89 324 656-13, Email: Bernd.Plannerer@crealog.com}
-\cvitem {Samsung R\&D Institute Ukraine}
-	{Oleg Kopysov, Tel: \texttt{+}38 066 6759 683, Email: o.kopysov@samsung.com, 
-	\newline {LinkedIn profile: \url{https://www.linkedin.com/in/oleg-kopysov-a2a50371}}
+\cvitem{technical}{software architecture, efficiency, real time systems, GPGPU, HPC, graphics, low power programmable devises/embedded systems}
+\cvitem{Hobbies}{Basketball, Guitar}
+%
+%\section{References}
+%\cvitem{CreaLog Munich}
+%{Dr. Bernd Plannerer, Tel: \texttt{+}49 89 324 656-13, Email: Bernd.Plannerer@crealog.com}
+%\cvitem {Samsung R\&D Institute Ukraine}
+%{
+%	Oleg Kopysov, Tel: \texttt{+}38 066 6759 683, Email: o.kopysov@samsung.com, 
+%	\newline {LinkedIn profile: \url{https://www.linkedin.com/in/oleg-kopysov-a2a50371}}
+%}
+%
+\cvitem{}
+{
+%	I can provide references upon request
 % my sigh
-	\newline{} \newline{} \newline{} \newline{}
+	~\newline{} \newline{} \newline{}
 	\includegraphics[width=0.1\textwidth]{signatureIB.jpg}	
 	\newline{} \newline{}	
 	Leiden, \hspace{20pt} \today  \newline{}	
